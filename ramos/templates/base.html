@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1"/>
+    <title>{% block title %}Planner | UC{% endblock %}</title>
+    {% load staticfiles %}
+    {% load i18n %}
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+
+    <!-- Semantic -->
+    <script type="text/javascript" src="{% static 'semantic/semantic.min.js' %}"></script>
+    <link type="text/css" href="{% static 'semantic/semantic.min.css' %}" rel="stylesheet"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+
+    {% block more_static %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+
+{% block last_includes %}
+{% endblock %}
+
+</html>

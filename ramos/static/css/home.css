@@ -1,0 +1,22 @@
+#main_container {
+    width: 90%;
+}
+
+#main_grid {
+  margin: 10px;
+}
+
+html, body {
+
+}
+
+
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.ios,
+html.ios body {
+  height: 100% !important;
+}

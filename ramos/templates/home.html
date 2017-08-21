@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block more_static %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+  <div class="ui container" id="main_container">
+    <div class="ui six column grid" id="main_grid">
+      {% for semestre, ramos in malla.items %}
+      <div class="column">
+        <div class="ui teal big fluid label">{{ semestre }}</div>
+        {% for ramo in ramos %}
+          <div class="ui fluid centered card">
+            <div class="center aligned content" style="padding-bottom: 0px;">
+              <div class="header">{{ ramo }}</div>
+              <div class="description">
+                <p></p>
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="left floated like">
+                <i class="clock icon"></i>
+                10 créditos
+              </span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+{% endblock %}
+
+{% block last_includes %}
+  <!-- <script src="{% static 'js/js.cookie.js' %}"></script> -->
+  <script type="text/javascript">
+
+  </script>
+{% endblock %}
